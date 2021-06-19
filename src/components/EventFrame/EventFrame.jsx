@@ -4,8 +4,11 @@ import VimeoFrame from "../../components/VimeoFrame/VimeoFrame";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    width: "70vw",
     display: "flex",
+    justifyContent: "center",
+    width: "50vw",
+    alignItems: "center",
+    border: "10px solid white",
     "@media (max-width: 1024px)": { width: "80vw" },
     "@media (max-width: 768px)": { width: "90vw" },
     "@media (max-width: 480px)": { width: "100vw" },

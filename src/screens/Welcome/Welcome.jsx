@@ -1,20 +1,17 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import BMCLogo from "../../components/BMCLogo";
-import HeaderLogo from "../../components/HeaderLogo";
 import LoginForm from "../../components/LoginForm";
+import Header from "../../components/shared/Header";
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
     display: "flex",
     flexFlow: "column nowrap",
-    // margin: "0 auto",
-    paddingTop: "2vh",
     width: "100vw",
-    height: "90%",
+    height: "100%",
     textAlign: "center",
     alignItems: "center",
-    // justifyContent: "space-evenly",
+    justifyContent: "center",
   },
   blurb: {
     margin: "10vh 0 10vh 0 ",
@@ -33,12 +30,9 @@ export default function Welcome({ loginGuest, setCurrentGuest }) {
 
   return (
     <>
+      <Header />
       <div className={classes.welcome}>
-        <HeaderLogo />
         <LoginForm loginGuest={loginGuest} />
-      </div>
-      <div className={classes.logo}>
-        <BMCLogo />
       </div>
     </>
   );

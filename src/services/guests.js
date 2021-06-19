@@ -14,34 +14,34 @@ export const checkLoggedIn = async () => {
 };
 
 export const logoutGuest = async (id) => {
-  const response = await api.put(`/bmc_guests/${id}`, {
+  const response = await api.put(`/cwc_guests/${id}`, {
     duets_guest: { active: false },
   });
   return response;
 };
 
 export const createGuest = async (guestData) => {
-  const response = await api.post("/bmc_guests", { bmc_guest: guestData });
+  const response = await api.post("/cwc_guests", { cwc_guest: guestData });
   return response.data;
 };
 
 export const showGuests = async () => {
-  const response = await api.get("/bmc_guests");
+  const response = await api.get("/cwc_guests");
   return response.data;
 };
 
 export const deleteGuest = async (id) => {
-  const response = await api.delete(`/bmc_guests/${id}`);
+  const response = await api.delete(`/cwc_guests/${id}`);
   return response.data;
 };
 
 export const deleteAllGuests = async () => {
-  const response = await api.delete("/all_bmc_guests");
+  const response = await api.delete("/all_cwc_guests");
   return response.data;
 };
 
 export const updateGuest = async (id, payload) => {
-  const resp = await api.put(`/bmc_guests/${id}`, { bmc_guest: payload });
+  const resp = await api.put(`/cwc_guests/${id}`, { cwc_guest: payload });
   return resp.data;
 };
 

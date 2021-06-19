@@ -75,7 +75,11 @@ export default function AdminPanel(props) {
 
   return (
     <div>
-      <AdminNav handleLogout={handleLogout} currentUser={currentUser} />
+      <AdminNav
+        handleLogout={handleLogout}
+        currentUser={currentUser}
+        admin="admin"
+      />
 
       <div className={classes.panelBody}>
         <Paper className={classes.vimeopaper}>

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   welcome: { color: "white" },
 }));
 
-export default function AdminNav({ handleLogout, currentUser }) {
+export default function AdminNav({ handleLogout, currentUser, admin }) {
   const classes = useStyles();
   const [chatOpen, setChatOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -36,13 +36,15 @@ export default function AdminNav({ handleLogout, currentUser }) {
       <AppBar className={classes.appbar}>
         <Link to="/" className={classes.link}>
           <Button className={classes.link}>
-            <Typography>BCM Gala 25 Admin Panel</Typography>
+            <Typography>CWC 50th Admin Panel</Typography>
           </Button>
         </Link>
-        {currentUser.firstname.toLowerCase() === "evyn" ? (
+        {admin ? (
           <Typography className={classes.welcome}>
             Hi{" "}
             <Button
+              className={classes.welcome}
+              variant="outlined"
               onClick={(e) => {
                 setChatOpen((prev) => !prev);
                 setAnchorEl(e.currentTarget);

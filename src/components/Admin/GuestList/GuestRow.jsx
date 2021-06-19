@@ -4,7 +4,7 @@ import { processDateTime } from "../../../services/datestimes";
 
 export default function GuestRow({ guest, isItemSelected, handleSelect }) {
   const prettyCreated = processDateTime(guest.created_at);
-  const prettyUpdated = processDateTime(guest.updated_at);
+  // const prettyUpdated = processDateTime(guest.updated_at);
 
   return (
     <TableRow key={guest.id} hover role="checkbox" selected={isItemSelected}>
@@ -19,9 +19,9 @@ export default function GuestRow({ guest, isItemSelected, handleSelect }) {
         {guest.firstname} {guest.lastname}
       </TableCell>
       <TableCell align="center">{guest.email}</TableCell>
-      <TableCell align="center">{guest.address}</TableCell>
+      {/* <TableCell align="center">{guest.address}</TableCell> */}
       <TableCell align="center">{prettyCreated}</TableCell>
-      <TableCell align="center">{prettyUpdated}</TableCell>
+      {/* <TableCell align="center">{prettyUpdated}</TableCell> */}
     </TableRow>
   );
 }

@@ -23,9 +23,9 @@ export default function GuestTableHead(props) {
       <TableCell align="center">Guest ID</TableCell>
       <TableCell align="center">Name</TableCell>
       <TableCell align="center">Email</TableCell>
-      <TableCell align="center">Address</TableCell>
+      {/* <TableCell align="center">Address</TableCell> */}
       <TableCell align="center">Created At</TableCell>
-      <TableCell align="center">Updated At</TableCell>
+      {/* <TableCell align="center">Updated At</TableCell> */}
     </TableRow>
   );
 }
