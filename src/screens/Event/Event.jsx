@@ -2,7 +2,10 @@ import { makeStyles } from "@material-ui/core";
 // import { useHistory } from "react-router-dom";
 import Header from "../../components/shared/Header";
 import EventFrame from "../../components/EventFrame/EventFrame";
-// import { useState } from "react";
+import Fifty from "../../components/Fifty";
+import SupportButton from "../../components/Support/SupportButton";
+import { useState } from "react";
+import SupportPopUp from "../../components/Support/SupportPopUp";
 
 const useStyles = makeStyles((theme) => ({
   event: {
@@ -17,17 +20,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Event({ currentGuest }) {
   const classes = useStyles();
-  // const history = useHistory();
-  // const [donateOpen, setDonateOpen] = useState(false);
-  // const [anchorEl, setAnchorEl] = useState(null);
+  const [supportOpen, setSupportOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   // if (!currentGuest) {
   //   history.push("/");
   // }
 
-  // const handleClose = () => {
-  //   setDonateOpen(false);
-  // };
+  const handleOpen = (e) => {
+    setSupportOpen(true);
+    setAnchorEl(e.currentTarget);
+  };
+
+  const handleClose = () => {
+    setSupportOpen(false);
+  };
 
   return (
     <>
@@ -35,6 +42,13 @@ export default function Event({ currentGuest }) {
       <div className={classes.event}>
         <EventFrame />
       </div>
+      <SupportButton handleOpen={handleOpen} />
+      <SupportPopUp
+        anchorEl={anchorEl}
+        handleClose={handleClose}
+        open={supportOpen}
+      />
+      <Fifty />
     </>
   );
 }

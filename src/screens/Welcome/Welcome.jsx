@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
+import Fifty from "../../components/Fifty";
 import LoginForm from "../../components/LoginForm";
 import Header from "../../components/shared/Header";
 
@@ -34,6 +35,7 @@ export default function Welcome({ loginGuest, setCurrentGuest }) {
       <div className={classes.welcome}>
         <LoginForm loginGuest={loginGuest} />
       </div>
+      <Fifty />
     </>
   );
 }

@@ -30,7 +30,7 @@ export default function PopupWrapper(props) {
 
   const withClickAway = (
     <ClickAwayListener onClickAway={handleClose}>
-      <Paper style={{ width: "50vw", height: "90vh" }}>{children}</Paper>
+      <Paper style={{}}>{children}</Paper>
     </ClickAwayListener>
   );
 
