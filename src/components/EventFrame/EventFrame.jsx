@@ -9,9 +9,9 @@ const useStyles = makeStyles((theme) => ({
     width: "50vw",
     alignItems: "center",
     border: "10px solid white",
-    "@media (max-width: 1024px)": { width: "80vw" },
-    "@media (max-width: 768px)": { width: "90vw" },
-    "@media (max-width: 480px)": { width: "100vw" },
+    "@media (max-width: 1024px)": { width: "60vw" },
+    "@media (max-width: 768px)": { width: "80vw" },
+    "@media (max-width: 480px)": { width: "90vw" },
   },
   vimeoframe: {
     width: "100%",
