@@ -12,10 +12,7 @@ export default function SupportPopUp(props) {
       placement="left"
     >
       <div style={{ margin: "0 2vw 0 2vw", padding: "2vh 0 2vh 0" }}>
-        <em>
-          <strong>Tech support</strong>
-        </em>{" "}
-        - For technical assistance, email us at{" "}
+        <em>Tech Support</em> - For technical assistance, email us at{" "}
         <a href="mailto:vesupport@portlighting.com">
           vesupport@portlighting.com
         </a>

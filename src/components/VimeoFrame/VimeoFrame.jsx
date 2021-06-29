@@ -9,7 +9,7 @@ export default function VimeoFrame() {
       }}
     >
       <iframe
-        src="https://vimeo.com/event/1089310/embed/ede2f091fc?muted=0"
+        src="https://player.vimeo.com/video/567245978"
         frameBorder="0"
         allow="autoplay; fullscreen; picture-in-picture;"
         title="vimeo event"
